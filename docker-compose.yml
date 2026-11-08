@@ -1,0 +1,28 @@
+services:
+  # Backend Python
+  api:
+    build: ./backend
+    container_name: telemetry-api
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./backend:/app
+      - ./db_data:/data
+    environment:
+      - FLASK_DEBUG=true
+      - DB_DATA_DIR=/data
+
+  
+  # Utilizzo di Node-RED
+  nodered:
+    image: nodered/node-red:latest
+    container_name: telemetry-nodered
+    ports:
+      - "1880:1880"
+    volumes:
+      - nodered_data:/data
+    depends_on:
+      - api
+
+volumes:
+  nodered_data:

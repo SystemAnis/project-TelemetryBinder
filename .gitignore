@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Database SQLite generato a runtime da Docker
+db_data/*.db
+
+# Variabili d'ambiente e segreti
+.env
+*.env
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+
+# Log
+*.log
