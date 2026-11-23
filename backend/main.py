@@ -1,7 +1,7 @@
 import os 
 from flask import Flask
 from database import db
-from tabelleTelemetria import datiTelemetrici
+from tabelleTelemetria import datiTelemetrici, configurazioneAlert
 from endpoint_API import api_telemetry
 
 # avvio dell'app Flask
@@ -26,6 +26,15 @@ with app.app_context():
     
 # Le altre rotte verrano aggiunte qui
 app.register_blueprint(api_telemetry)
+
+# CORS: permette al pannello della dashboard Node-RED (porta 1880)
+# di chiamare direttamente le API Flask (porta 5000) dal browser.
+@app.after_request
+def aggiungi_header_cors(response):
+    response.headers['Access-Control-Allow-Origin'] = '*'
+    response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
+    response.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, OPTIONS'
+    return response
 
 
 if __name__ == '__main__':

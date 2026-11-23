@@ -1,4 +1,13 @@
 services:
+  # Broker MQTT centrale (HiveMQ Community Edition)
+  # Riceve i pacchetti telemetrici pubblicati dai sensori/simulatore sulla porta 1883
+  hivemq:
+    image: hivemq/hivemq-ce:latest
+    container_name: telemetry-hivemq
+    ports:
+      - "1883:1883"
+    restart: unless-stopped
+
   # Backend Python
   api:
     build: ./backend
@@ -11,18 +20,41 @@ services:
     environment:
       - FLASK_DEBUG=true
       - DB_DATA_DIR=/data
+    restart: unless-stopped
 
-  
-  # Utilizzo di Node-RED
+  # Microservizio Consumer MQTT -> HTTP API
+  # Resta in ascolto sul topic telemetry/# di HiveMQ e inoltra i dati JSON al backend Flask
+  mqtt-worker:
+    build: ./worker
+    container_name: telemetry-mqtt-worker
+    environment:
+      - MQTT_BROKER=hivemq
+      - MQTT_PORT=1883
+      - MQTT_TOPIC=telemetry/#
+      - API_URL=http://api:5000/api/telemetry
+    depends_on:
+      - hivemq
+      - api
+    restart: unless-stopped
+
+  # Node-RED in Docker (opzionale).
+  # Di default NON viene avviato: in questo progetto Node-RED gira sul PC
+  # (comando "node-red") e usa la porta 1880.
+  # Per avviarlo comunque in Docker:
+  #   docker compose --profile nodered up -d nodered
   nodered:
     image: nodered/node-red:latest
     container_name: telemetry-nodered
+    # Mantiene i permessi del tuo utente Linux ed evita file bloccati da root in ./nodered_data
+    user: "1000:1000"
     ports:
       - "1880:1880"
     volumes:
-      - nodered_data:/data
+      - ./nodered_data:/data
     depends_on:
       - api
+      - hivemq
+    restart: unless-stopped
 
 volumes:
   nodered_data:

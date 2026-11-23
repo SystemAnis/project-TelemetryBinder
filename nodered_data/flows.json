@@ -1,0 +1,3620 @@
+[
+    {
+        "id": "2615f40ea49943c3",
+        "type": "tab",
+        "label": "Lezione - 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f87871e0ce0a4209",
+        "type": "tab",
+        "label": "Lezione 5 - Broker",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "232c2fccccb2d285",
+        "type": "tab",
+        "label": "Lezione 6 - ripasso generale",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "2b4da9a6ed6673da",
+        "type": "tab",
+        "label": "Simulatore_IoT",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "bd221f64448ef576",
+        "type": "tab",
+        "label": "Dashboard_Grafica",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "99b11249821b3b1e",
+        "type": "tab",
+        "label": "Anis Ravera - Verifica Intermedia",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "38cea33a51cf4774",
+        "type": "tab",
+        "label": "Ravera ",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "9aaf7a0ceef6480d",
+        "type": "junction",
+        "z": "2615f40ea49943c3",
+        "x": 400,
+        "y": 280,
+        "wires": [
+            [
+                "8b2abc6c683aa4e8",
+                "93d29166934b195f",
+                "9c20b724e141a574"
+            ]
+        ]
+    },
+    {
+        "id": "94bbe6c78ee2f8bb",
+        "type": "junction",
+        "z": "2615f40ea49943c3",
+        "x": 500,
+        "y": 440,
+        "wires": [
+            [
+                "a0d71d83c3e760b8",
+                "d3e761b2c15b25fd"
+            ]
+        ]
+    },
+    {
+        "id": "ea0abe33fe70b1e1",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": false
+    },
+    {
+        "id": "caf42b9946cfed2b",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#fcfcfd",
+            "primary": "#0d74ce",
+            "bgPage": "#f9f9fb",
+            "groupBg": "#ffffff",
+            "groupOutline": "#d9d9e0"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "02b1250151462d42",
+        "type": "ui-page",
+        "name": "Lezione Ripasso",
+        "ui": "ea0abe33fe70b1e1",
+        "path": "/page1",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "caf42b9946cfed2b",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "tabs": [],
+        "order": 1,
+        "className": "",
+        "visible": true,
+        "disabled": "false"
+    },
+    {
+        "id": "5eaaa18c39f9dd06",
+        "type": "ui-group",
+        "name": "Grafico",
+        "page": "02b1250151462d42",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default",
+        "tab": ""
+    },
+    {
+        "id": "ed376207c90152a9",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.hivemq.com",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "d4db864583ade75f",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "ui_tab_telemetry",
+        "type": "ui_tab",
+        "name": "Control Room",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "telemetry_group",
+        "type": "ui_group",
+        "name": "Server Monitor",
+        "tab": "ui_tab_telemetry",
+        "order": 1,
+        "disp": true,
+        "width": "25",
+        "collapse": false,
+        "disabled": false,
+        "hidden": false,
+        "className": "tb-panel tb-telemetry"
+    },
+    {
+        "id": "83a66cbaa512573e",
+        "type": "ui_tab",
+        "name": "Ravera",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "d021f733b675b897",
+        "type": "ui_group",
+        "name": "Inserimento Dati",
+        "tab": "83a66cbaa512573e",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "574435bec3ccdcc5",
+        "type": "ui_group",
+        "name": "Risultato Registrazione",
+        "tab": "83a66cbaa512573e",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4696e18b625d359d",
+        "type": "ui_tab",
+        "name": "Ravera",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "aae093b33471042d",
+        "type": "ui_group",
+        "name": "Inserimento Dati",
+        "tab": "4696e18b625d359d",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "060699caf4a68c60",
+        "type": "ui_group",
+        "name": "Risultato Registrazione",
+        "tab": "4696e18b625d359d",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "092b7e2f15e0a80a",
+        "type": "ui_tab",
+        "name": "Ricetta Casuale",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "9470cb680ae49e04",
+        "type": "ui_group",
+        "name": "Ricetta Casuale",
+        "tab": "092b7e2f15e0a80a",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "tab_dashboard_ricetta",
+        "type": "ui_tab",
+        "name": "Ricette casuale",
+        "icon": "restaurant",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "7f018f379b633687",
+        "type": "ui_group",
+        "name": "Ricetta Casuale",
+        "tab": "tab_dashboard_ricetta",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5e04eb95825aa2dd",
+        "type": "ui_group",
+        "name": "Comandi",
+        "tab": "tab_dashboard_ricetta",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "49044bee1613191e",
+        "type": "ui_group",
+        "name": "Dettagli Ricetta",
+        "tab": "tab_dashboard_ricetta",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "aa0453fe76692635",
+        "type": "ui_group",
+        "name": "Generatore Casuale",
+        "tab": "tab_dashboard_ricetta",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "broker_hivemq",
+        "type": "mqtt-broker",
+        "name": "HiveMQ Docker",
+        "broker": "hivemq",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "tab_esame_ui",
+        "type": "ui_tab",
+        "name": "Dashboard Esame",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "group_esame_dati",
+        "type": "ui_group",
+        "name": "Metriche",
+        "tab": "tab_esame_ui",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "group_esame_raw",
+        "type": "ui_group",
+        "name": "Log Sensori",
+        "tab": "tab_esame_ui",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "broker_hivemq_chill",
+        "type": "mqtt-broker",
+        "name": "HiveMQ Public",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "tab_dashboard_chill",
+        "type": "ui_tab",
+        "name": "Esame",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "group_chill",
+        "type": "ui_group",
+        "name": "Ricezione Dati MQTT",
+        "tab": "tab_dashboard_chill",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "broker_hivemq_esami",
+        "type": "mqtt-broker",
+        "name": "HiveMQ Public",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "tab_esami",
+        "type": "ui_tab",
+        "name": "Esame MQTT",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "2b4e3405a256dc6d",
+        "type": "ui_group",
+        "name": "Anomaly Logs",
+        "tab": "ui_tab_telemetry",
+        "order": 3,
+        "disp": true,
+        "width": "25",
+        "collapse": false,
+        "className": "tb-panel tb-logs"
+    },
+    {
+        "id": "tb_config_group",
+        "type": "ui_group",
+        "name": "Configuration & Alerts",
+        "tab": "ui_tab_telemetry",
+        "order": 2,
+        "disp": true,
+        "width": "25",
+        "collapse": false,
+        "className": "tb-panel tb-config"
+    },
+    {
+        "id": "7bd8cad1fc1191b6",
+        "type": "inject",
+        "z": "2615f40ea49943c3",
+        "name": "Giorgio Poggio",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "paziente",
+        "payload": "{\"name\":\"Giorgio\",\"surname\":\"Poggio\",\"data\":{\"CF\":\"\",\"DOB\":\"27/04/1978\",\"age\":48,\"gender\":\"M\",\"city\":\"Torino\"},\"triage\":{\"sintomi\":\"mal di testa\",\"alert\":0}}",
+        "payloadType": "json",
+        "x": 280,
+        "y": 240,
+        "wires": [
+            [
+                "9aaf7a0ceef6480d"
+            ]
+        ]
+    },
+    {
+        "id": "ec16d9868c593517",
+        "type": "debug",
+        "z": "2615f40ea49943c3",
+        "name": "debug 9",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "fec12ab060f82928",
+        "type": "inject",
+        "z": "2615f40ea49943c3",
+        "name": "Milena Bardi",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "paziente",
+        "payload": "{\"name\":\"Milena\",\"surname\":\"Bardi\",\"data\":{\"CF\":\"\",\"DOB\":\"27/05/1999\",\"age\":27,\"gender\":\"F\",\"city\":\"Torino\"},\"triage\":{\"sintomi\":\"svenimento\",\"alert\":2}}",
+        "payloadType": "json",
+        "x": 290,
+        "y": 280,
+        "wires": [
+            [
+                "9aaf7a0ceef6480d"
+            ]
+        ]
+    },
+    {
+        "id": "8b2abc6c683aa4e8",
+        "type": "switch",
+        "z": "2615f40ea49943c3",
+        "name": "",
+        "property": "payload.triage.alert",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "2",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 510,
+        "y": 220,
+        "wires": [
+            [
+                "ec16d9868c593517"
+            ]
+        ]
+    },
+    {
+        "id": "a0d71d83c3e760b8",
+        "type": "template",
+        "z": "2615f40ea49943c3",
+        "name": "",
+        "field": "payload.testo",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{{payload.name}} {{payload.surname}}, {{payload.data.genderType}} di {{payload.data.age}} anni manifesta {{payload.triage.sintomi}}, allerta: {{payload.triage.alert}}",
+        "output": "str",
+        "x": 580,
+        "y": 420,
+        "wires": [
+            [
+                "48e02fa29975c168"
+            ]
+        ]
+    },
+    {
+        "id": "48e02fa29975c168",
+        "type": "debug",
+        "z": "2615f40ea49943c3",
+        "name": "debug 10",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload.testo",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "93d29166934b195f",
+        "type": "debug",
+        "z": "2615f40ea49943c3",
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "db79b2a379f1edd3",
+        "type": "comment",
+        "z": "2615f40ea49943c3",
+        "name": "condizione sull'alert",
+        "info": "",
+        "x": 550,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "7b1d5f551bc50b28",
+        "type": "comment",
+        "z": "2615f40ea49943c3",
+        "name": "tentativo di concatenazione",
+        "info": "",
+        "x": 630,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "d3e761b2c15b25fd",
+        "type": "change",
+        "z": "2615f40ea49943c3",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.testo",
+                "pt": "msg",
+                "to": "payload.name & ' ' & payload.surname & ', ' & payload.data.genderType & ' di ' &  payload.data.age & ' anni, manifesta: ' &  payload.triage.sintomi & '. Livello di allerta:' & payload.triage.alert",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 460,
+        "wires": [
+            [
+                "2c2c136ad036cdb9"
+            ]
+        ]
+    },
+    {
+        "id": "2c2c136ad036cdb9",
+        "type": "debug",
+        "z": "2615f40ea49943c3",
+        "name": "debug 14",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload.testo",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "910ef832558fdc3b",
+        "type": "change",
+        "z": "2615f40ea49943c3",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.data.genderType",
+                "pt": "msg",
+                "to": "Donna",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 300,
+        "wires": [
+            [
+                "b1c71e49975210e5"
+            ]
+        ]
+    },
+    {
+        "id": "9c20b724e141a574",
+        "type": "switch",
+        "z": "2615f40ea49943c3",
+        "name": "",
+        "property": "payload.data.gender",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "F",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "M",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 370,
+        "y": 340,
+        "wires": [
+            [
+                "910ef832558fdc3b"
+            ],
+            [
+                "714422e3ee75ac3d"
+            ]
+        ]
+    },
+    {
+        "id": "714422e3ee75ac3d",
+        "type": "change",
+        "z": "2615f40ea49943c3",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.data.genderType",
+                "pt": "msg",
+                "to": "Uomo",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 340,
+        "wires": [
+            [
+                "b1c71e49975210e5"
+            ]
+        ]
+    },
+    {
+        "id": "6e7c18d3dd14f43b",
+        "type": "link in",
+        "z": "2615f40ea49943c3",
+        "name": "templateOut",
+        "links": [
+            "b1c71e49975210e5"
+        ],
+        "x": 445,
+        "y": 440,
+        "wires": [
+            [
+                "94bbe6c78ee2f8bb"
+            ]
+        ]
+    },
+    {
+        "id": "b1c71e49975210e5",
+        "type": "link out",
+        "z": "2615f40ea49943c3",
+        "name": "template",
+        "mode": "link",
+        "links": [
+            "6e7c18d3dd14f43b"
+        ],
+        "x": 835,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "4b5f21bebac18559",
+        "type": "inject",
+        "z": "f87871e0ce0a4209",
+        "name": "temp",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "3",
+        "topic": "",
+        "payload": "$floor($random() * 16) + 15",
+        "payloadType": "jsonata",
+        "x": 170,
+        "y": 100,
+        "wires": [
+            [
+                "2ceddfb40ca7299d"
+            ]
+        ]
+    },
+    {
+        "id": "3d618e0ffa508a21",
+        "type": "inject",
+        "z": "f87871e0ce0a4209",
+        "name": "hum",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "$floor($random() * 41) + 40",
+        "payloadType": "jsonata",
+        "x": 170,
+        "y": 180,
+        "wires": [
+            [
+                "44855b0e4c3bd541"
+            ]
+        ]
+    },
+    {
+        "id": "2ceddfb40ca7299d",
+        "type": "template",
+        "z": "f87871e0ce0a4209",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\"sensore\": \"temperatura\", \"valore\": {{payload}} }",
+        "output": "str",
+        "x": 380,
+        "y": 100,
+        "wires": [
+            [
+                "1d4bf9940b08e85e"
+            ]
+        ]
+    },
+    {
+        "id": "44855b0e4c3bd541",
+        "type": "template",
+        "z": "f87871e0ce0a4209",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\"sensore\": \"umidità\", \"valore\": {{payload}} }",
+        "output": "str",
+        "x": 380,
+        "y": 180,
+        "wires": [
+            [
+                "e1fe9e8c2a47b988"
+            ]
+        ]
+    },
+    {
+        "id": "1d4bf9940b08e85e",
+        "type": "debug",
+        "z": "f87871e0ce0a4209",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "e1fe9e8c2a47b988",
+        "type": "debug",
+        "z": "f87871e0ce0a4209",
+        "name": "debug 2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "6d07a3ddcee65759",
+        "type": "comment",
+        "z": "f87871e0ce0a4209",
+        "name": "mando i dati su mqtt in due canali",
+        "info": "",
+        "x": 410,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "8708ff6afd0f4f3c",
+        "type": "comment",
+        "z": "f87871e0ce0a4209",
+        "name": "generazione json per char/dashboard in template",
+        "info": "",
+        "x": 420,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "444614e7afb87940",
+        "type": "template",
+        "z": "f87871e0ce0a4209",
+        "name": "payload.data diventa payload",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{{payload.data}}",
+        "output": "str",
+        "x": 560,
+        "y": 420,
+        "wires": [
+            [
+                "5e4cc9d185a8e492"
+            ]
+        ]
+    },
+    {
+        "id": "5e4cc9d185a8e492",
+        "type": "template",
+        "z": "f87871e0ce0a4209",
+        "name": "msg topic diventa temp",
+        "field": "topic",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "temp",
+        "output": "str",
+        "x": 570,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "342db8065a625b28",
+        "type": "debug",
+        "z": "f87871e0ce0a4209",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 360,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "af215627c512ffe8",
+        "type": "change",
+        "z": "f87871e0ce0a4209",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.data",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "hum",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f3e6bb8483470ceb",
+        "type": "comment",
+        "z": "f87871e0ce0a4209",
+        "name": "generazione json per char/dashboard in change",
+        "info": "",
+        "x": 380,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "cd7ee858484d41a5",
+        "type": "json",
+        "z": "f87871e0ce0a4209",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 310,
+        "y": 420,
+        "wires": [
+            [
+                "444614e7afb87940"
+            ]
+        ]
+    },
+    {
+        "id": "f9dba4006f8ea573",
+        "type": "json",
+        "z": "f87871e0ce0a4209",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 310,
+        "y": 660,
+        "wires": [
+            [
+                "af215627c512ffe8"
+            ]
+        ]
+    },
+    {
+        "id": "d78fa2df67ce3959",
+        "type": "inject",
+        "z": "f87871e0ce0a4209",
+        "name": "inject",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 1000,
+        "wires": [
+            [
+                "5c11a4dfa3675918",
+                "937619bb73b08255",
+                "22ded4b1359678ac"
+            ]
+        ]
+    },
+    {
+        "id": "5c11a4dfa3675918",
+        "type": "function",
+        "z": "f87871e0ce0a4209",
+        "name": "Add person to map",
+        "func": "msg.payload = {\n    name: \"Colosseo\",\n    lat: 41.8902,\n    lon: 12.4922\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 940,
+        "wires": [
+            [
+                "0fc49847d875b210"
+            ]
+        ]
+    },
+    {
+        "id": "937619bb73b08255",
+        "type": "template",
+        "z": "f87871e0ce0a4209",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n  \"name\": \"Duomo di Milano\",\n  \"lat\": 45.4642,\n  \"lon\": 9.1900\n}",
+        "output": "json",
+        "x": 360,
+        "y": 1000,
+        "wires": [
+            [
+                "0fc49847d875b210"
+            ]
+        ]
+    },
+    {
+        "id": "22ded4b1359678ac",
+        "type": "change",
+        "z": "f87871e0ce0a4209",
+        "name": "Jsonata / Change",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 390,
+        "y": 1060,
+        "wires": [
+            [
+                "0fc49847d875b210"
+            ]
+        ]
+    },
+    {
+        "id": "0fc49847d875b210",
+        "type": "worldmap",
+        "z": "f87871e0ce0a4209",
+        "name": "",
+        "lat": "",
+        "lon": "",
+        "zoom": "",
+        "layer": "OSMG",
+        "cluster": "",
+        "maxage": "",
+        "usermenu": "show",
+        "layers": "show",
+        "panit": "false",
+        "panlock": "false",
+        "zoomlock": "false",
+        "hiderightclick": "false",
+        "coords": "none",
+        "showgrid": "false",
+        "showruler": "false",
+        "allowFileDrop": "false",
+        "path": "/worldmap",
+        "overlist": "DR,CO,RA,DN",
+        "maplist": "OSMG,OSMC,EsriC,EsriS,UKOS",
+        "mapname": "",
+        "mapurl": "",
+        "mapopt": "",
+        "mapwms": false,
+        "x": 600,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "eb035e96fc26c167",
+        "type": "inject",
+        "z": "f87871e0ce0a4209",
+        "name": "inject",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 1220,
+        "wires": [
+            [
+                "e7e4912a6ce79f1f",
+                "35c5bb1a8ab49a75",
+                "26dc87c478f2d061"
+            ]
+        ]
+    },
+    {
+        "id": "e7e4912a6ce79f1f",
+        "type": "function",
+        "z": "f87871e0ce0a4209",
+        "name": "Add person to map",
+        "func": "msg.payload = {\n    name: \"Colosseo\",\n    lat: 41.8902,\n    lon: 12.4922\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 1280,
+        "wires": [
+            [
+                "384f1ba188596dc1"
+            ]
+        ]
+    },
+    {
+        "id": "35c5bb1a8ab49a75",
+        "type": "template",
+        "z": "f87871e0ce0a4209",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n  \"name\": \"Duomo di Milano\",\n  \"lat\": 45.4642,\n  \"lon\": 9.1900\n}",
+        "output": "json",
+        "x": 340,
+        "y": 1320,
+        "wires": [
+            [
+                "384f1ba188596dc1"
+            ]
+        ]
+    },
+    {
+        "id": "26dc87c478f2d061",
+        "type": "change",
+        "z": "f87871e0ce0a4209",
+        "name": "Jsonata / Change",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 370,
+        "y": 1360,
+        "wires": [
+            [
+                "384f1ba188596dc1"
+            ]
+        ]
+    },
+    {
+        "id": "384f1ba188596dc1",
+        "type": "worldmap",
+        "z": "f87871e0ce0a4209",
+        "name": "",
+        "lat": "",
+        "lon": "",
+        "zoom": "",
+        "layer": "OSMG",
+        "cluster": "",
+        "maxage": "",
+        "usermenu": "show",
+        "layers": "show",
+        "panit": "false",
+        "panlock": "false",
+        "zoomlock": "false",
+        "hiderightclick": "false",
+        "coords": "none",
+        "showgrid": "false",
+        "showruler": "false",
+        "allowFileDrop": "false",
+        "path": "/worldmap",
+        "overlist": "DR,CO,RA,DN",
+        "maplist": "OSMG,OSMC,EsriC,EsriS,UKOS",
+        "mapname": "",
+        "mapurl": "",
+        "mapopt": "",
+        "mapwms": false,
+        "x": 600,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "ec319ebbd6a2c2fd",
+        "type": "comment",
+        "z": "f87871e0ce0a4209",
+        "name": "Connetti: http://localhost:1880/worldmap/",
+        "info": "",
+        "x": 680,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "c63ff2cb4e5a96a8",
+        "type": "comment",
+        "z": "f87871e0ce0a4209",
+        "name": "Connettiti: http://localhost:1880/ui",
+        "info": "",
+        "x": 670,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "cb3f3f050375b113",
+        "type": "comment",
+        "z": "f87871e0ce0a4209",
+        "name": "Problema: non funzionano i bottoni",
+        "info": "",
+        "x": 640,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "cd5f8d65f0c8adb1",
+        "type": "ui_template",
+        "z": "f87871e0ce0a4209",
+        "group": "",
+        "name": "",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "format": "<iframe src=\"/worldmap\" width=\"100%\" height=\"500px\" style=\"border:none;\"></iframe>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 340,
+        "y": 1440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d0f8f90c3f76ca67",
+        "type": "mqtt in",
+        "z": "f87871e0ce0a4209",
+        "name": "",
+        "topic": "/standoff",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "ed376207c90152a9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 100,
+        "y": 420,
+        "wires": [
+            [
+                "cd7ee858484d41a5",
+                "342db8065a625b28"
+            ]
+        ]
+    },
+    {
+        "id": "a08f7498305384c6",
+        "type": "mqtt in",
+        "z": "f87871e0ce0a4209",
+        "name": "",
+        "topic": "/standoff",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "ed376207c90152a9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 100,
+        "y": 660,
+        "wires": [
+            [
+                "342db8065a625b28",
+                "f9dba4006f8ea573"
+            ]
+        ]
+    },
+    {
+        "id": "5f3f230dbda59ac0",
+        "type": "inject",
+        "z": "232c2fccccb2d285",
+        "name": "Dati Persona",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Persona",
+        "payload": "{\"name\":\"Anis\",\"surname\":\"Ravera\",\"age\":20}",
+        "payloadType": "json",
+        "x": 290,
+        "y": 160,
+        "wires": [
+            [
+                "e94966a470711a0d"
+            ]
+        ]
+    },
+    {
+        "id": "e94966a470711a0d",
+        "type": "debug",
+        "z": "232c2fccccb2d285",
+        "name": "debug 4",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "b818ed799b9725ed",
+        "type": "template",
+        "z": "232c2fccccb2d285",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{{payload.surname}} {{payload.name}} ha {{payload.age}} anni",
+        "output": "str",
+        "x": 440,
+        "y": 360,
+        "wires": [
+            [
+                "062d4b2db4879327"
+            ]
+        ]
+    },
+    {
+        "id": "780d421c2b3de7ca",
+        "type": "inject",
+        "z": "232c2fccccb2d285",
+        "name": "Dati Persona",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Persona",
+        "payload": "{\"name\":\"Anis\",\"surname\":\"Ravera\",\"age\":20}",
+        "payloadType": "json",
+        "x": 250,
+        "y": 360,
+        "wires": [
+            [
+                "b818ed799b9725ed"
+            ]
+        ]
+    },
+    {
+        "id": "062d4b2db4879327",
+        "type": "debug",
+        "z": "232c2fccccb2d285",
+        "name": "debug 6",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "1154b757b310bb5b",
+        "type": "inject",
+        "z": "232c2fccccb2d285",
+        "name": "Dati Persona",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Persona",
+        "payload": "{\"name\":\"Anis\",\"surname\":\"Ravera\",\"age\":20}",
+        "payloadType": "json",
+        "x": 250,
+        "y": 460,
+        "wires": [
+            [
+                "4f09f793e01df3f1"
+            ]
+        ]
+    },
+    {
+        "id": "77f8c3b3653248db",
+        "type": "debug",
+        "z": "232c2fccccb2d285",
+        "name": "debug 7",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "4f09f793e01df3f1",
+        "type": "change",
+        "z": "232c2fccccb2d285",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.surname & \" \" & payload.name & \" \" & \"ha\" & \" \" & payload.age & \" \" & \"anni\"",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 460,
+        "wires": [
+            [
+                "77f8c3b3653248db"
+            ]
+        ]
+    },
+    {
+        "id": "50720d0bbe28fbe6",
+        "type": "function",
+        "z": "232c2fccccb2d285",
+        "name": "function 1",
+        "func": "let cognome = msg.payload.surname;\nlet nome = msg.payload.name;\nlet anni = msg.payload.age;\n\nlet frase = nome + \" \" + cognome + \" ha\" + \" \" + anni + \" anni\";\n\nmsg.payload = frase;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 560,
+        "wires": [
+            [
+                "42d55fee90342a2d"
+            ]
+        ]
+    },
+    {
+        "id": "f2a68790937967a3",
+        "type": "inject",
+        "z": "232c2fccccb2d285",
+        "name": "Dati Persona",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Persona",
+        "payload": "{\"name\":\"Anis\",\"surname\":\"Ravera\",\"age\":20}",
+        "payloadType": "json",
+        "x": 250,
+        "y": 560,
+        "wires": [
+            [
+                "50720d0bbe28fbe6"
+            ]
+        ]
+    },
+    {
+        "id": "42d55fee90342a2d",
+        "type": "debug",
+        "z": "232c2fccccb2d285",
+        "name": "debug 8",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "eaededc938f61952",
+        "type": "comment",
+        "z": "232c2fccccb2d285",
+        "name": "Tipi diversi di outputtare la stessa cosa!!",
+        "info": "",
+        "x": 950,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "323015f64a9b4533",
+        "type": "inject",
+        "z": "232c2fccccb2d285",
+        "name": "Dati Persona",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Persona",
+        "payload": "Ravera Anis ha 20 anni",
+        "payloadType": "str",
+        "x": 290,
+        "y": 100,
+        "wires": [
+            [
+                "72004f51724c6aa0"
+            ]
+        ]
+    },
+    {
+        "id": "72004f51724c6aa0",
+        "type": "debug",
+        "z": "232c2fccccb2d285",
+        "name": "debug 5",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "d41081dd94baebb3",
+        "type": "inject",
+        "z": "232c2fccccb2d285",
+        "name": "Calcolo Banane",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Banane",
+        "payload": "{\"frutto\":\"Banana\",\"quantità\":10,\"prezzo\":20,\"IVA\":22}",
+        "payloadType": "json",
+        "x": 260,
+        "y": 700,
+        "wires": [
+            [
+                "a61d03ad6dc2592c"
+            ]
+        ]
+    },
+    {
+        "id": "5d9a0284c38f8e5a",
+        "type": "debug",
+        "z": "232c2fccccb2d285",
+        "name": "debug 12",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "a61d03ad6dc2592c",
+        "type": "function",
+        "z": "232c2fccccb2d285",
+        "name": "function 2",
+        "func": "let frutto = msg.payload.frutto;\nlet quantita = Number(msg.payload.quantità);\nlet prezzo = Number(msg.payload.prezzo);\nlet percentualeIva = Number(msg.payload.IVA);\n\nlet valoreIva = (prezzo * percentualeIva) / 100;\nlet totale = prezzo - valoreIva;\n\nmsg.payload = `Hai acquistato ${quantita} ${frutto}/e. Prezzo base: ${prezzo}€. IVA (${percentualeIva}%): ${valoreIva.toFixed(2)}€. Totale (prezzo - IVA): ${totale.toFixed(2)}€.`;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 700,
+        "wires": [
+            [
+                "5d9a0284c38f8e5a"
+            ]
+        ]
+    },
+    {
+        "id": "d2716f43ed24787b",
+        "type": "debug",
+        "z": "232c2fccccb2d285",
+        "name": "debug 13",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "a221f3d1d6abe882",
+        "type": "mqtt in",
+        "z": "232c2fccccb2d285",
+        "name": "",
+        "topic": "/ict-001",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "ed376207c90152a9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 270,
+        "y": 900,
+        "wires": [
+            [
+                "d2716f43ed24787b"
+            ]
+        ]
+    },
+    {
+        "id": "1390d8d5c827f2da",
+        "type": "mqtt out",
+        "z": "232c2fccccb2d285",
+        "name": "",
+        "topic": "/ict-001",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "ed376207c90152a9",
+        "x": 500,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "d65e6dc3b709a348",
+        "type": "inject",
+        "z": "232c2fccccb2d285",
+        "name": "Inject",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Persona",
+        "payload": "Ah, però",
+        "payloadType": "str",
+        "x": 230,
+        "y": 820,
+        "wires": [
+            [
+                "1390d8d5c827f2da"
+            ]
+        ]
+    },
+    {
+        "id": "f0c43e7dfe33cd67",
+        "type": "mqtt in",
+        "z": "232c2fccccb2d285",
+        "name": "",
+        "topic": "/ict-003",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "ed376207c90152a9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 190,
+        "y": 1260,
+        "wires": [
+            [
+                "f56e8666d57098c5"
+            ]
+        ]
+    },
+    {
+        "id": "0bf0404088f9a66c",
+        "type": "ui-chart",
+        "z": "232c2fccccb2d285",
+        "group": "5eaaa18c39f9dd06",
+        "name": "",
+        "label": "chart",
+        "order": 1,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": 1,
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 730,
+        "y": 1240,
+        "wires": [
+            [
+                "2d605b5ec1f49c2f"
+            ]
+        ]
+    },
+    {
+        "id": "06c89402aef09aa9",
+        "type": "change",
+        "z": "232c2fccccb2d285",
+        "name": "hum",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.data",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "hum",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 1220,
+        "wires": [
+            [
+                "0bf0404088f9a66c"
+            ]
+        ]
+    },
+    {
+        "id": "f56e8666d57098c5",
+        "type": "switch",
+        "z": "232c2fccccb2d285",
+        "name": "",
+        "property": "payload.sensore",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "temperarura",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "umidità",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 350,
+        "y": 1260,
+        "wires": [
+            [
+                "06c89402aef09aa9",
+                "7a54eb2c5bc4dc20"
+            ],
+            [
+                "822d9da6d6d12d16"
+            ]
+        ]
+    },
+    {
+        "id": "2d605b5ec1f49c2f",
+        "type": "debug",
+        "z": "232c2fccccb2d285",
+        "name": "debug 15",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "822d9da6d6d12d16",
+        "type": "change",
+        "z": "232c2fccccb2d285",
+        "name": "temp",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.data",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "temp",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 1280,
+        "wires": [
+            [
+                "0bf0404088f9a66c",
+                "569a8685efff6c81"
+            ]
+        ]
+    },
+    {
+        "id": "45eafc4a0782d0dd",
+        "type": "inject",
+        "z": "232c2fccccb2d285",
+        "name": "temp",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "3",
+        "topic": "",
+        "payload": "$floor($random() * 16) + 15",
+        "payloadType": "jsonata",
+        "x": 210,
+        "y": 1340,
+        "wires": [
+            [
+                "f56e8666d57098c5"
+            ]
+        ]
+    },
+    {
+        "id": "882fa82f0424ef47",
+        "type": "inject",
+        "z": "232c2fccccb2d285",
+        "name": "hum",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "$floor($random() * 41) + 40",
+        "payloadType": "jsonata",
+        "x": 210,
+        "y": 1400,
+        "wires": [
+            [
+                "f56e8666d57098c5",
+                "667326e25d7499eb"
+            ]
+        ]
+    },
+    {
+        "id": "51ce9bba9d837657",
+        "type": "mqtt out",
+        "z": "232c2fccccb2d285",
+        "name": "",
+        "topic": "/ict-003",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "ed376207c90152a9",
+        "x": 680,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "28f5a33614d68d1f",
+        "type": "inject",
+        "z": "232c2fccccb2d285",
+        "name": "temp",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "3",
+        "topic": "",
+        "payload": "$floor($random() * 100) + 345",
+        "payloadType": "jsonata",
+        "x": 230,
+        "y": 1100,
+        "wires": [
+            [
+                "652b7a41b8018d26",
+                "d440c54e2dc0eebf"
+            ]
+        ]
+    },
+    {
+        "id": "652b7a41b8018d26",
+        "type": "template",
+        "z": "232c2fccccb2d285",
+        "name": "Temp",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\"sensore\": \"temperatura\", \"valore\": {{payload}} }",
+        "output": "str",
+        "x": 430,
+        "y": 1080,
+        "wires": [
+            [
+                "51ce9bba9d837657"
+            ]
+        ]
+    },
+    {
+        "id": "d440c54e2dc0eebf",
+        "type": "template",
+        "z": "232c2fccccb2d285",
+        "name": "Umid",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\"sensore\": \"umidità\", \"valore\": {{payload}} }",
+        "output": "str",
+        "x": 430,
+        "y": 1120,
+        "wires": [
+            [
+                "51ce9bba9d837657"
+            ]
+        ]
+    },
+    {
+        "id": "569a8685efff6c81",
+        "type": "debug",
+        "z": "232c2fccccb2d285",
+        "name": "debug 16",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "667326e25d7499eb",
+        "type": "debug",
+        "z": "232c2fccccb2d285",
+        "name": "debug 17",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 400,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "7a54eb2c5bc4dc20",
+        "type": "debug",
+        "z": "232c2fccccb2d285",
+        "name": "debug 18",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 380,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "28fd7306332e4683",
+        "type": "inject",
+        "z": "2b4da9a6ed6673da",
+        "name": "Inject",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 220,
+        "y": 160,
+        "wires": [
+            [
+                "a38cd087134693f3"
+            ]
+        ]
+    },
+    {
+        "id": "a38cd087134693f3",
+        "type": "function",
+        "z": "2b4da9a6ed6673da",
+        "name": "function 3",
+        "func": "// Variabili che ci servono per generare valori casuali\nconst sensori = [\n    { id: 'sensore_server_1', temp: [18, 27], hum: [40, 60], ram: [20, 85] },\n    { id: 'sensore_server_2', temp: [18, 27], hum: [40, 60], ram: [15, 80] },\n    { id: 'sensore_edge_1',   temp: [5, 45], hum: [20, 80], ram: [30, 90] }\n];\n\nfunction casuale(min, max, decimali) {\n    return (Math.random() * (max - min) + min).toFixed(decimali);\n}\n\n// Creazione di un array di messaggi (uno per ogni metrica)\n// Node-RED invierà 9 chiamate HTTP distinte al backend Python in uno\nconst messaggi = [];\n\nsensori.forEach(function(s) {\n    let tempCasuale = casuale(s.temp[0], s.temp[1], 1);\n    let umiditaCasuale = casuale(s.hum[0], s.hum[1], 0);\n    let ramCasuale = casuale(s.ram[0], s.ram[1], 0);\n\n    messaggi.push({\n        payload: {\n            \"sensor_id\": s.id,\n            \"metric\": \"temperatura\",\n            \"value\": tempCasuale\n        }\n    });\n    messaggi.push({\n        payload: {\n            \"sensor_id\": s.id,\n            \"metric\": \"umidita\",\n            \"value\": umiditaCasuale\n        }\n    });\n    messaggi.push({\n        payload: {\n            \"sensor_id\": s.id,\n            \"metric\": \"utilizzo_ram\",\n            \"value\": ramCasuale\n        }\n    });\n});\n\nreturn [messaggi];\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 160,
+        "wires": [
+            [
+                "3abd41bbf13a49cf"
+            ]
+        ]
+    },
+    {
+        "id": "3abd41bbf13a49cf",
+        "type": "mqtt out",
+        "z": "2b4da9a6ed6673da",
+        "name": "",
+        "topic": "telemetry/sensors",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "broker_hivemq",
+        "x": 650,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "c639411c9ebd65a8",
+        "type": "http request",
+        "z": "bd221f64448ef576",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://api:5000/api/telemetry",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 550,
+        "y": 320,
+        "wires": [
+            [
+                "5ebb38cbf4ccfd3d"
+            ]
+        ]
+    },
+    {
+        "id": "2cbc1aa1dcee3f2f",
+        "type": "ui_gauge",
+        "z": "bd221f64448ef576",
+        "name": "Temperatura Attuale",
+        "group": "telemetry_group",
+        "order": 1,
+        "width": "8",
+        "height": "4",
+        "gtype": "gage",
+        "title": "Temperatura",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 60,
+        "colors": [
+            "#2dd4bf",
+            "#2dd4bf",
+            "#2dd4bf"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "tb-gauge tb-gauge-temp",
+        "x": 1000,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "4394ad0f12d2a501",
+        "type": "ui_chart",
+        "z": "bd221f64448ef576",
+        "name": "Storico Temperatura",
+        "group": "telemetry_group",
+        "order": 4,
+        "width": "8",
+        "height": "4",
+        "label": "Temperatura nel tempo",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "Nessun dato ricevuto",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "60",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": true,
+        "useUTC": false,
+        "colors": [
+            "#2DD4BF"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "tb-chart tb-chart-temp",
+        "x": 1000,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a1d797a26ba3b14b",
+        "type": "inject",
+        "z": "bd221f64448ef576",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 350,
+        "y": 320,
+        "wires": [
+            [
+                "c639411c9ebd65a8"
+            ]
+        ]
+    },
+    {
+        "id": "5ebb38cbf4ccfd3d",
+        "type": "function",
+        "z": "bd221f64448ef576",
+        "name": "function 4",
+        "func": "// Se il backend restituisce un errore (oggetto) invece della lista, evito il crash\nlet records = Array.isArray(msg.payload) ? msg.payload : [];\n\nconst sensorFilter = flow.get('tb_sensor_filter');\nif (Array.isArray(sensorFilter)) {\n    records = records.filter(r => sensorFilter.includes(r.sensor_id));\n}\n\n// Filtro il database per separare le tre metriche\nlet tempRecords = records.filter(r => r.metric === \"temperatura\");\nlet humRecords = records.filter(r => r.metric === \"umidita\");\nlet ramRecords = records.filter(r => r.metric === \"utilizzo_ram\");\n\n// Estraggo solo l'ultimo valore per ogni metrica\nlet lastTemp = tempRecords.length > 0 ? tempRecords[tempRecords.length - 1].value : 0;\nlet lastHum = humRecords.length > 0 ? humRecords[humRecords.length - 1].value : 0;\nlet lastRam = ramRecords.length > 0 ? ramRecords[ramRecords.length - 1].value : 0;\n\n// Filtriamo WARNING e CRITICAL, invertendo l'ordine per avere i piu' recenti in cima\nlet anomalies = records.filter(r => r.status !== \"OK\").reverse();\n\n// Filtro date: confronto la data locale italiana con gli input type=\"date\"\nconst logStart = flow.get('tb_log_start') || '';\nconst logEnd = flow.get('tb_log_end') || '';\n\nif (logStart || logEnd) {\n    anomalies = anomalies.filter(function(r) {\n        let rawTs = r.timestamp.includes('T')\n            ? r.timestamp\n            : r.timestamp.replace(' ', 'T');\n\n        if (!rawTs.endsWith('Z') && !rawTs.includes('+')) rawTs += 'Z';\n\n        const giorno = new Date(rawTs).toLocaleDateString('sv-SE', {\n            timeZone: 'Europe/Rome'\n        });\n\n        return (!logStart || giorno >= logStart) &&\n               (!logEnd || giorno <= logEnd);\n    });\n}\n\nlet tableData = anomalies.map(r => {\n    // Converte il timestamp UTC del DB nel fuso italiano (gestisce in automatico ora solare e legale)\n    let rawTs = r.timestamp.includes('T') ? r.timestamp : r.timestamp.replace(' ', 'T');\n    if (!rawTs.endsWith('Z') && !rawTs.includes('+')) rawTs += 'Z';\n\n    let oraLocale = new Date(rawTs).toLocaleTimeString('it-IT', {\n        timeZone: 'Europe/Rome',\n        hour: '2-digit',\n        minute: '2-digit',\n        second: '2-digit'\n    });\n\n    // Differenzia CRITICAL (rosso) e WARNING (giallo)\n    let statusHtml = r.status === \"CRITICAL\"\n        ? '<span style=\"color: #ff3b3b !important; font-weight: 700;\">CRITICAL</span>'\n        : '<span style=\"color: #facc15 !important; font-weight: 700;\">WARNING</span>';\n\n    return {\n        \"Time\": oraLocale,\n        \"Device\": r.sensor_id,\n        \"Metric\": r.metric,\n        \"Status\": statusHtml,\n        \"Value\": r.value\n    };\n});\n\n// Inviamo i dati sui 4 pin di uscita separati!\nreturn [\n    { payload: lastTemp }, // Gauge/Chart Temperatura\n    { payload: lastHum },  // Gauge/Chart Umidita\n    { payload: lastRam },  // Gauge/Chart RAM\n    { payload: tableData } // Tabella Allarmi\n];",
+        "outputs": 4,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 320,
+        "wires": [
+            [
+                "2cbc1aa1dcee3f2f",
+                "4394ad0f12d2a501"
+            ],
+            [
+                "11f8d1024b6b15a0",
+                "ee154635119a9062"
+            ],
+            [
+                "f7d5dc91a97ef439",
+                "06a9e8921d6e3795"
+            ],
+            [
+                "c0c8d5cbaabeee61"
+            ]
+        ]
+    },
+    {
+        "id": "c0c8d5cbaabeee61",
+        "type": "ui_table",
+        "z": "bd221f64448ef576",
+        "group": "2b4e3405a256dc6d",
+        "name": "Anomaly Logs",
+        "order": 2,
+        "width": "25",
+        "height": "5",
+        "columns": [
+            {
+                "field": "Time",
+                "title": "Time",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "Device",
+                "title": "Device",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "Metric",
+                "title": "Metric",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "Status",
+                "title": "Status",
+                "width": "",
+                "align": "left",
+                "formatter": "html",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "Value",
+                "title": "Value",
+                "width": "",
+                "align": "right",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 0,
+        "cts": false,
+        "x": 980,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "11f8d1024b6b15a0",
+        "type": "ui_gauge",
+        "z": "bd221f64448ef576",
+        "name": "Umidità Attuale",
+        "group": "telemetry_group",
+        "order": 2,
+        "width": "8",
+        "height": "4",
+        "gtype": "gage",
+        "title": "Umidità",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 100,
+        "colors": [
+            "#38bdf8",
+            "#38bdf8",
+            "#38bdf8"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "tb-gauge tb-gauge-hum",
+        "x": 980,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "ee154635119a9062",
+        "type": "ui_chart",
+        "z": "bd221f64448ef576",
+        "name": "Storico Umidità",
+        "group": "telemetry_group",
+        "order": 5,
+        "width": "8",
+        "height": "4",
+        "label": "Umidità nel tempo",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "Nessun dato ricevuto",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": true,
+        "useUTC": false,
+        "colors": [
+            "#38bdf8",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "tb-chart tb-chart-hum",
+        "x": 980,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f7d5dc91a97ef439",
+        "type": "ui_gauge",
+        "z": "bd221f64448ef576",
+        "name": "Memory Usata",
+        "group": "telemetry_group",
+        "order": 3,
+        "width": "8",
+        "height": "4",
+        "gtype": "gage",
+        "title": "Memoria usata",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 100,
+        "colors": [
+            "#a78bfa",
+            "#a78bfa",
+            "#a78bfa"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "tb-gauge tb-gauge-ram",
+        "x": 980,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "06a9e8921d6e3795",
+        "type": "ui_chart",
+        "z": "bd221f64448ef576",
+        "name": "Storico RAM",
+        "group": "telemetry_group",
+        "order": 6,
+        "width": "8",
+        "height": "4",
+        "label": "RAM nel tempo",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "Nessun dato ricevuto",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": true,
+        "useUTC": false,
+        "colors": [
+            "#a78bfa",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000",
+            "#000000"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "tb-chart tb-chart-ram",
+        "x": 970,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "tb_config_template",
+        "type": "ui_template",
+        "z": "bd221f64448ef576",
+        "group": "tb_config_group",
+        "name": "Configuration & Alerts",
+        "order": 1,
+        "width": "25",
+        "height": "4",
+        "format": "<form name=\"tbCfg\" class=\"tb-config-form\" novalidate ng-submit=\"tbCfg.$valid && salvaConfig()\">\n\n    <div class=\"tb-config-head\">\n        <div class=\"tb-config-sub\">\n            Definisci le soglie massime. Al superamento viene registrato un allarme.\n        </div>\n\n        <label class=\"tb-switch\">\n      <input type=\"checkbox\" ng-model=\"cfg.enabled\"\n             ng-change=\"salvaSoloAvvisi()\"\n             ng-disabled=\"cfg.loading || cfg.saving\">\n      <span class=\"tb-switch-track\" aria-hidden=\"true\"></span>\n      <span>Avvisi attivi</span>\n    </label>\n    </div>\n\n    <!-- Selettore del dispositivo di destinazione (Default globale oppure singolo sensore) -->\n    <div style=\"display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:10px 0 14px 0\">\n        <label style=\"display:flex;align-items:center;gap:8px;font-size:.85rem;color:#cbd5e1\">\n      <span>Dispositivo:</span>\n      <select ng-model=\"cfg.sensorId\"\n              ng-change=\"caricaConfig()\"\n              ng-disabled=\"cfg.loading || cfg.saving\"\n              style=\"background:#0f172a;color:#e8eef8;border:1px solid #334155;border-radius:6px;padding:5px 10px;font-size:.85rem;cursor:pointer\">\n        <option value=\"default\">Default (tutti i dispositivi)</option>\n        <option ng-repeat=\"s in cfg.sensors\" ng-value=\"s\">{{s}}</option>\n      </select>\n    </label>\n\n        <!-- Badge grigio se il dispositivo eredita le regole base -->\n        <span ng-if=\"cfg.sensorId !== 'default' && cfg.isDefault\"\n          style=\"font-size:.75rem;color:#94a3b8;background:#1e293b;border:1px solid #334155;border-radius:999px;padding:2px 9px\">\n      Usa soglie Default\n    </span>\n\n        <!-- Badge azzurro + pulsante di ripristino se il dispositivo ha un'eccezione salvata -->\n        <span ng-if=\"cfg.sensorId !== 'default' && !cfg.isDefault\"\n          style=\"font-size:.75rem;color:#38bdf8;background:rgba(14,165,233,.12);border:1px solid rgba(56,189,248,.35);border-radius:999px;padding:2px 9px\">\n      Soglie personalizzate attive\n    </span>\n\n        <button type=\"button\"\n            ng-if=\"cfg.sensorId !== 'default' && !cfg.isDefault\"\n            ng-click=\"ripristinaDefault()\"\n            ng-disabled=\"cfg.loading || cfg.saving\"\n            style=\"background:#1e293b;color:#e2e8f0;border:1px solid #475569;border-radius:6px;padding:3px 9px;font-size:.75rem;cursor:pointer\">\n      Ripristina Default\n    </button>\n    </div>\n\n    <div class=\"tb-config-grid\">\n        <label class=\"tb-field\">\n      <span>Temperatura</span>\n      <span class=\"tb-input\">\n        <input type=\"number\" ng-model=\"cfg.temp\" min=\"0\" max=\"100\"\n               step=\"0.1\" required ng-change=\"cfg.saved = false\"\n               ng-disabled=\"cfg.loading || cfg.saving\">\n        <em>&deg;C</em>\n      </span>\n    </label>\n\n        <label class=\"tb-field\">\n      <span>Umidit&agrave;</span>\n      <span class=\"tb-input\">\n        <input type=\"number\" ng-model=\"cfg.hum\" min=\"0\" max=\"100\"\n               step=\"1\" required ng-change=\"cfg.saved = false\"\n               ng-disabled=\"cfg.loading || cfg.saving\">\n        <em>%</em>\n      </span>\n    </label>\n\n        <label class=\"tb-field\">\n      <span>RAM</span>\n      <span class=\"tb-input\">\n        <input type=\"number\" ng-model=\"cfg.ram\" min=\"0\" max=\"100\"\n               step=\"1\" required ng-change=\"cfg.saved = false\"\n               ng-disabled=\"cfg.loading || cfg.saving\">\n        <em>%</em>\n      </span>\n    </label>\n    </div>\n\n    <div class=\"tb-config-actions\">\n        <span class=\"tb-saved\" ng-if=\"cfg.saved\">&check; Configurazione salvata</span>\n        <span ng-if=\"cfg.loading\" style=\"font-size:.8rem;color:#94a3b8;margin-right:.75rem\">Caricamento...</span>\n        <span ng-if=\"cfg.error\" style=\"font-size:.8rem;color:#ff6b6b;margin-right:.75rem\">{{cfg.error}}</span>\n        <button type=\"button\" class=\"tb-btn\" ng-disabled=\"tbCfg.$invalid || cfg.loading || cfg.saving\"\n            ng-click=\"salvaConfig()\">\n      Salva configurazione\n    </button>\n    </div>\n</form>\n\n<script>\n    (function(scope) {\n    // Il backend Flask e' esposto sulla porta 5000 dello stesso host della dashboard.\n    var API_BASE = 'http://' + window.location.hostname + ':5000';\n\n    scope.cfg = {\n        sensorId: 'default',\n        sensors: [],\n        isDefault: true,\n        temp: 45,\n        hum: 70,\n        ram: 90,\n        enabled: true,\n        loading: true,\n        saving: false,\n        saved: false,\n        error: ''\n    };\n\n    function applicaConfig(data, forzatoPersonalizzato) {\n        scope.cfg.temp = data.tempMax;\n        scope.cfg.hum = data.umiditaMax;\n        scope.cfg.ram = data.ramMax;\n        scope.cfg.enabled = !!data.alertsEnabled;\n        if (forzatoPersonalizzato !== undefined) {\n            scope.cfg.isDefault = !forzatoPersonalizzato;\n        } else {\n            scope.cfg.isDefault = (data.is_default !== undefined)\n                ? !!data.is_default\n                : (scope.cfg.sensorId === 'default');\n        }\n        scope.cfg.loading = false;\n        scope.cfg.saving = false;\n        scope.cfg.error = '';\n    }\n\n    function gestisciErrore(err) {\n        console.error('Errore configurazione alert:', err);\n        scope.cfg.loading = false;\n        scope.cfg.saving = false;\n        scope.cfg.error = 'Backend non raggiungibile';\n    }\n\n    // Invia GET/DELETE /api/config?sensor_id=... oppure POST /api/config con sensor_id nel JSON\n    function richiestaConfig(method, corpo) {\n        var url = API_BASE + '/api/config';\n        var opzioni = { method: method, headers: {} };\n\n        if (method === 'GET' || method === 'DELETE') {\n            url += '?sensor_id=' + encodeURIComponent(scope.cfg.sensorId || 'default');\n        } else if (corpo !== undefined) {\n            var payload = Object.assign({ sensor_id: scope.cfg.sensorId || 'default' }, corpo);\n            opzioni.headers['Content-Type'] = 'application/json';\n            opzioni.body = JSON.stringify(payload);\n        }\n\n        return fetch(url, opzioni).then(function(risposta) {\n            if (!risposta.ok) {\n                throw new Error('HTTP ' + risposta.status);\n            }\n            return risposta.json();\n        });\n    }\n\n    // Popola il menu a tendina con tutti i dispositivi presenti nel database\n    scope.caricaSensori = function() {\n        fetch(API_BASE + '/api/sensors')\n            .then(function(risposta) {\n                if (!risposta.ok) { throw new Error('HTTP ' + risposta.status); }\n                return risposta.json();\n            })\n            .then(function(lista) {\n                if (Array.isArray(lista)) {\n                    scope.$apply(function() { scope.cfg.sensors = lista; });\n                }\n            })\n            .catch(function(err) {\n                console.warn('Impossibile caricare elenco sensori:', err);\n            });\n    };\n\n    scope.caricaConfig = function() {\n        scope.cfg.loading = true;\n        scope.cfg.saved = false;\n        richiestaConfig('GET').then(function(data) {\n            scope.$apply(function() { applicaConfig(data); });\n        }).catch(function(err) {\n            scope.$apply(function() { gestisciErrore(err); });\n        });\n    };\n\n    scope.salvaConfig = function() {\n        if (scope.cfg.loading || scope.cfg.saving) { return; }\n        scope.cfg.saving = true;\n        scope.cfg.saved = false;\n\n        richiestaConfig('POST', {\n            tempMax: Number(scope.cfg.temp),\n            umiditaMax: Number(scope.cfg.hum),\n            ramMax: Number(scope.cfg.ram),\n            alertsEnabled: !!scope.cfg.enabled\n        }).then(function(risposta) {\n            scope.$apply(function() {\n                var personalizzato = (scope.cfg.sensorId !== 'default');\n                applicaConfig(risposta.config || risposta, personalizzato);\n                scope.cfg.saved = true;\n            });\n        }).catch(function(err) {\n            scope.$apply(function() { gestisciErrore(err); });\n        });\n    };\n\n    // Elimina le soglie personalizzate del sensore via POST e ricarica quelle Default\n    scope.ripristinaDefault = function() {\n        if (scope.cfg.loading || scope.cfg.saving || scope.cfg.sensorId === 'default') { return; }\n            scope.cfg.saving = true;\n            scope.cfg.saved = false;\n        \n        richiestaConfig('POST', { reset: true }).then(function(risposta) {\n            scope.$apply(function() {\n                applicaConfig(risposta.config || risposta, false);\n                scope.cfg.saved = true;\n            });\n        }).catch(function(err) {\n            scope.$apply(function() { gestisciErrore(err); });\n        });\n    };\n\n    // Lo switch salva subito il suo stato per il dispositivo selezionato\n    scope.salvaSoloAvvisi = function() {\n        if (scope.cfg.loading || scope.cfg.saving) { return; }\n        scope.cfg.saving = true;\n        scope.cfg.saved = false;\n\n        richiestaConfig('POST', { alertsEnabled: !!scope.cfg.enabled })\n            .then(function(risposta) {\n                scope.$apply(function() {\n                    var config = risposta.config || risposta;\n                    scope.cfg.enabled = !!config.alertsEnabled;\n                    if (scope.cfg.sensorId !== 'default') {\n                        scope.cfg.isDefault = false;\n                    }\n                    scope.cfg.saving = false;\n                    scope.cfg.saved = true;\n                    scope.cfg.error = '';\n                });\n            })\n            .catch(function(err) {\n                scope.$apply(function() {\n                    // In caso di errore ripristino lo stato precedente dello switch\n                    scope.cfg.enabled = !scope.cfg.enabled;\n                    gestisciErrore(err);\n                });\n            });\n    };\n\n    scope.caricaSensori();\n    scope.caricaConfig();\n})(scope);\n</script>",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "tb-config-card",
+        "x": 920,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "tb_global_css",
+        "type": "ui_template",
+        "z": "bd221f64448ef576",
+        "group": "",
+        "name": "Global CSS - Control Room",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "format": "<style id=\"tb-control-room-css\">\n/* TelemetryBinder — Control Room only.\n   Scoped by .tb-panel (present only in Dashboard_Grafica / Control Room)\n   and by body:has(.tb-panel), so other Dashboard 1 tabs keep their theme. */\n\nbody:has(.tb-panel) {\n  background:\n    radial-gradient(1200px 720px at 16% -8%, #172a44 0%, #0b1220 40%, #070c15 100%)\n    fixed !important;\n}\n\nbody:has(.tb-panel) md-content,\nbody:has(.tb-panel) #Tab_Control_Room {\n  background: transparent !important;\n}\n\nbody:has(.tb-panel) #toolbar {\n  background: rgba(9, 15, 26, .93) !important;\n  border-bottom: 1px solid rgba(148, 163, 184, .14);\n  box-shadow: 0 10px 30px rgba(0, 0, 0, .25) !important;\n}\n\nbody:has(.tb-panel) #toolbar .md-toolbar-tools h1 {\n  color: #e6eef9 !important;\n  font-weight: 600;\n  letter-spacing: .025em;\n}\n\nbody:has(.tb-panel) #toolbar .md-toolbar-tools h1::before {\n  content: \"TelemetryBinder\";\n  color: #ffffff;\n  font-size: .78em;\n  font-weight: 700;\n  letter-spacing: .01em;\n  margin-right: 14px;\n  padding-right: 14px;\n  border-right: 1px solid rgba(148, 163, 184, .25);\n}\n\nbody:has(.tb-panel) #toolbar md-button,\nbody:has(.tb-panel) #toolbar .md-icon-button {\n  color: #cfe0f5 !important;\n}\n\n/* Cards */\n.nr-dashboard-cardpanel.tb-panel {\n  background:\n    linear-gradient(180deg, rgba(30, 42, 60, .97) 0%, rgba(21, 30, 46, .99) 100%)\n    !important;\n  border: 1px solid rgba(148, 163, 184, .16) !important;\n  border-radius: 16px !important;\n  box-shadow:\n    0 18px 50px rgba(0, 0, 0, .38),\n    inset 0 1px 0 rgba(255, 255, 255, .04) !important;\n}\n\n/* Dashboard 1 wraps every widget in an md-card painted with the theme's\n   group background. Make them transparent so the panel gradient shows. */\n.tb-panel md-card {\n  background: transparent !important;\n  box-shadow: none !important;\n}\n\n.tb-panel .nr-dashboard-cardtitle {\n  color: #e6eef9 !important;\n  text-transform: uppercase;\n  letter-spacing: .13em;\n  font-size: 12px;\n  font-weight: 600;\n  opacity: .94;\n  margin-top: 16px;\n  margin-bottom: 6px;\n  margin-left: 16px;\n}\n\n.tb-panel .nr-dashboard-cardtitle::before {\n  content: \"\";\n  display: inline-block;\n  width: 3px;\n  height: 13px;\n  border-radius: 2px;\n  background: linear-gradient(180deg, #38bdf8, #6366f1);\n  box-shadow: 0 0 10px rgba(56, 189, 248, .55);\n  margin-right: 9px;\n  vertical-align: -2px;\n}\n\n/* Gauge / chart titles */\n.tb-telemetry .nr-dashboard-gauge-title,\n.tb-telemetry .nr-dashboard-chart-title {\n  color: #9fb2cd !important;\n  text-transform: uppercase;\n  letter-spacing: .08em;\n  font-size: 11px;\n  font-weight: 600;\n  opacity: .92;\n}\n\n.tb-telemetry .nr-dashboard-gauge svg text {\n  fill: #f4f8ff !important;\n  font-family: \"Inter\", \"Segoe UI\", system-ui, sans-serif !important;\n}\n\n.tb-telemetry .nr-dashboard-gauge svg text[font-size=\"11px\"] {\n  fill: #9fb2cd !important;\n}\n\n.tb-telemetry .nr-dashboard-gauge svg path[fill=\"#7f7f7f\"] {\n  fill: #26344a !important;\n}\n\n.tb-telemetry .nr-dashboard-chart-container {\n  background: transparent !important;\n}\n\n/* Log table */\n.tb-logs .tabulator {\n  background: transparent !important;\n  border: 0 !important;\n  color: #dbe7f7 !important;\n  font-size: 13px;\n}\n\n.tb-logs .tabulator .tabulator-table,\n.tb-logs .tabulator .tabulator-tableHolder {\n  background: transparent !important;\n}\n\n.tb-logs .tabulator .tabulator-header {\n  background: transparent !important;\n  border-bottom: 1px solid rgba(148, 163, 184, .16) !important;\n  color: #8fa3bf !important;\n}\n\n.tb-logs .tabulator .tabulator-col {\n  background: transparent !important;\n  border-right: 0 !important;\n  text-transform: uppercase;\n  letter-spacing: .07em;\n  font-size: 11px;\n  font-weight: 600;\n}\n\n.tb-logs .tabulator .tabulator-col .tabulator-col-content {\n  padding: 10px 12px;\n}\n\n.tb-logs .tabulator .tabulator-col:last-child .tabulator-col-content {\n  justify-content: flex-end;\n}\n\n.tb-logs .tabulator .tabulator-col:last-child .tabulator-col-title {\n  text-align: right;\n}\n\n.tb-logs .tabulator .tabulator-row {\n  background: transparent !important;\n  border-bottom: 1px solid rgba(148, 163, 184, .07) !important;\n  min-height: 40px;\n}\n\n.tb-logs .tabulator .tabulator-row.tabulator-row-even {\n  background: rgba(255, 255, 255, .015) !important;\n}\n\n.tb-logs .tabulator .tabulator-row:hover {\n  background: rgba(56, 189, 248, .06) !important;\n}\n\n.tb-logs .tabulator .tabulator-cell {\n  border-right: 0 !important;\n  padding: 9px 12px;\n  color: #dbe7f7 !important;\n}\n\n.tb-logs .tabulator-cell[tabulator-field=\"Status\"],\n.tb-logs .tabulator-row .tabulator-cell:nth-child(4) {\n  color: #fb7185 !important;\n  font-weight: 700;\n  letter-spacing: .04em;\n}\n\n.tb-logs .tabulator-cell[tabulator-field=\"Value\"],\n.tb-logs .tabulator-row .tabulator-cell:nth-child(5) {\n  color: #e6eef9 !important;\n  font-variant-numeric: tabular-nums;\n}\n\n.tb-logs .tabulator .tabulator-tableHolder::-webkit-scrollbar {\n  width: 8px;\n  height: 8px;\n}\n.tb-logs .tabulator .tabulator-tableHolder::-webkit-scrollbar-thumb {\n  background: #2a3a52;\n  border-radius: 999px;\n}\n.tb-logs .tabulator .tabulator-tableHolder::-webkit-scrollbar-track {\n  background: transparent;\n}\n\n/* Configuration & Alerts */\n.tb-config-card .nr-dashboard-template {\n  height: 100%;\n}\n\n.tb-config-form {\n  --tb-text: #e6eef9;\n  --tb-muted: #8fa3bf;\n  --tb-border: rgba(148, 163, 184, .18);\n  box-sizing: border-box;\n  padding: 4px 16px 16px;\n  color: var(--tb-text);\n  font-family: \"Inter\", \"Segoe UI\", system-ui, sans-serif;\n}\n\n.tb-config-head {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  gap: 18px;\n  margin: 4px 0 14px;\n}\n\n.tb-config-sub {\n  color: var(--tb-muted);\n  font-size: 12px;\n  line-height: 1.5;\n  max-width: 640px;\n}\n\n.tb-switch {\n  position: relative;\n  display: flex;\n  align-items: center;\n  gap: 9px;\n  cursor: pointer;\n  color: #cfe0f5;\n  font-size: 12px;\n  font-weight: 600;\n  white-space: nowrap;\n  user-select: none;\n}\n\n.tb-switch input {\n  position: absolute;\n  opacity: 0;\n  width: 0;\n  height: 0;\n}\n\n.tb-switch-track {\n  width: 38px;\n  height: 21px;\n  border-radius: 999px;\n  background: #253247;\n  border: 1px solid #33445e;\n  position: relative;\n  transition: .2s ease;\n  flex: 0 0 auto;\n}\n\n.tb-switch-track::after {\n  content: \"\";\n  position: absolute;\n  top: 2px;\n  left: 2px;\n  width: 15px;\n  height: 15px;\n  border-radius: 50%;\n  background: #8fa3bf;\n  transition: .2s ease;\n}\n\n.tb-switch input:checked + .tb-switch-track {\n  background: linear-gradient(135deg, #2563eb, #38bdf8);\n  border-color: #38bdf8;\n  box-shadow: 0 0 14px rgba(56, 189, 248, .35);\n}\n\n.tb-switch input:checked + .tb-switch-track::after {\n  transform: translateX(17px);\n  background: #ffffff;\n}\n\n.tb-switch input:focus-visible + .tb-switch-track {\n  outline: 2px solid #93c5fd;\n  outline-offset: 2px;\n}\n\n.tb-config-grid {\n  display: grid;\n  grid-template-columns: repeat(3, minmax(0, 1fr));\n  gap: 12px;\n}\n\n.tb-field {\n  display: flex;\n  flex-direction: column;\n  gap: 6px;\n}\n\n.tb-field > span:first-child {\n  color: var(--tb-muted);\n  font-size: 11px;\n  text-transform: uppercase;\n  letter-spacing: .08em;\n  font-weight: 600;\n}\n\n.tb-input {\n  display: flex;\n  align-items: center;\n  background: #0f1726;\n  border: 1px solid var(--tb-border);\n  border-radius: 10px;\n  padding: 0 10px;\n  transition: .18s ease;\n}\n\n.tb-input:focus-within {\n  border-color: #38bdf8;\n  box-shadow: 0 0 0 3px rgba(56, 189, 248, .12);\n}\n\n.tb-input input {\n  flex: 1;\n  min-width: 0;\n  height: 38px;\n  background: transparent;\n  border: 0;\n  outline: 0;\n  color: var(--tb-text);\n  font-size: 14px;\n  font-variant-numeric: tabular-nums;\n}\n\n.tb-input input::-webkit-outer-spin-button,\n.tb-input input::-webkit-inner-spin-button {\n  -webkit-appearance: none;\n  margin: 0;\n}\n.tb-input input[type=\"number\"] {\n  -moz-appearance: textfield;\n}\n\n.tb-input em {\n  font-style: normal;\n  color: var(--tb-muted);\n  font-size: 12px;\n}\n\n.tb-config-actions {\n  display: flex;\n  justify-content: flex-end;\n  align-items: center;\n  gap: 14px;\n  margin-top: 14px;\n}\n\n.tb-saved {\n  color: #2dd4bf;\n  font-size: 12px;\n  font-weight: 600;\n}\n\n.tb-btn {\n  border: 0;\n  border-radius: 9px;\n  padding: 10px 18px;\n  color: #fff;\n  font-weight: 700;\n  font-size: 12px;\n  letter-spacing: .02em;\n  cursor: pointer;\n  background: linear-gradient(135deg, #2563eb, #38bdf8);\n  box-shadow: 0 8px 22px rgba(37, 99, 235, .3);\n  transition: .18s ease;\n}\n\n.tb-btn:hover {\n  filter: brightness(1.08);\n  transform: translateY(-1px);\n}\n\n.tb-btn:disabled {\n  opacity: .45;\n  cursor: not-allowed;\n  filter: none;\n  transform: none;\n  box-shadow: none;\n}\n\n.tb-btn:focus-visible {\n  outline: 2px solid #93c5fd;\n  outline-offset: 2px;\n}\n\n@media (max-width: 900px) {\n  .tb-config-grid { grid-template-columns: 1fr; }\n  .tb-config-head { align-items: flex-start; flex-direction: column; }\n  body:has(.tb-panel) #toolbar .md-toolbar-tools h1::before {\n    content: \"\";\n    margin: 0;\n    padding: 0;\n    border: 0;\n  }\n}\n</style>",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "resendOnRefresh": false,
+        "templateScope": "global",
+        "className": "",
+        "x": 600,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7914dff50d471e33",
+        "type": "ui_template",
+        "z": "bd221f64448ef576",
+        "group": "telemetry_group",
+        "name": "Filtri Monitoraggio",
+        "order": 0,
+        "width": "25",
+        "height": "2",
+        "format": "<div style=\"display:flex;flex-wrap:wrap;gap:14px;align-items:center;padding:4px 8px;font-size:12px\">\n    <span style=\"color:#94a3b8;text-transform:uppercase;letter-spacing:.08em\">Dispositivi</span>\n\n    <label ng-repeat=\"s in sensors\" style=\"display:flex;align-items:center;gap:6px;color:#e8eef8\">\n    <input type=\"checkbox\" ng-model=\"s.checked\" ng-change=\"applica()\">\n    {{s.id}}\n  </label>\n\n    <button type=\"button\" ng-click=\"tutti()\"\n          style=\"background:#1e293b;color:#e8eef8;border:1px solid #334155;border-radius:6px;padding:4px 10px;cursor:pointer\">\n    Tutti\n  </button>\n\n    <span ng-if=\"errore\" style=\"color:#ff6b6b\">{{errore}}</span>\n</div>\n\n<script>\n    (function(scope) {\n    var API = 'http://' + window.location.hostname + ':5000';\n\n    scope.sensors = [];\n    scope.errore = '';\n\n    scope.applica = function() {\n        var scelti = scope.sensors\n            .filter(function(s) { return s.checked; })\n            .map(function(s) { return s.id; });\n\n        scope.send({\n            topic: 'tb/filter/sensors',\n            payload: scelti\n        });\n    };\n\n    scope.tutti = function() {\n        scope.sensors.forEach(function(s) { s.checked = true; });\n        scope.applica();\n    };\n\n    fetch(API + '/api/sensors')\n        .then(function(r) {\n            if (!r.ok) { throw new Error('HTTP ' + r.status); }\n            return r.json();\n        })\n        .then(function(ids) {\n            scope.$apply(function() {\n                scope.sensors = ids.map(function(id) {\n                    return { id: id, checked: true };\n                });\n                scope.applica();\n            });\n        })\n        .catch(function(err) {\n            console.error(err);\n            scope.$apply(function() {\n                scope.errore = 'Backend non raggiungibile';\n            });\n        });\n})(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 90,
+        "y": 160,
+        "wires": [
+            [
+                "30582143ead073d2",
+                "ab5d3b2985de2d8c"
+            ]
+        ]
+    },
+    {
+        "id": "30582143ead073d2",
+        "type": "function",
+        "z": "bd221f64448ef576",
+        "name": "tb_set_sensor_filter",
+        "func": "flow.set('tb_sensor_filter', Array.isArray(msg.payload) ? msg.payload : []);\nreturn { topic: 'refresh', payload: {} };",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 160,
+        "wires": [
+            [
+                "c639411c9ebd65a8"
+            ]
+        ]
+    },
+    {
+        "id": "ab5d3b2985de2d8c",
+        "type": "ui_template",
+        "z": "bd221f64448ef576",
+        "group": "2b4e3405a256dc6d",
+        "name": "Filtri Log",
+        "order": 1,
+        "width": "25",
+        "height": "2",
+        "format": "<!-- Contenitore principale flessibile per allineare orizzontalmente i filtri e i pulsanti -->\n<div style=\"display:flex;flex-wrap:wrap;gap:14px;align-items:center;padding:4px 8px;font-size:12px\">\n\n    <!-- Selettore data di inizio: al cambio chiama subito applica() per aggiornare la tabella -->\n    <label style=\"color:#cbd5e1\">\n        Da\n        <input type=\"date\" ng-model=\"f.start\" ng-change=\"applica()\"\n               style=\"margin-left:6px;background:#0f172a;color:#e8eef8;border:1px solid #334155;border-radius:6px;padding:4px 8px\">\n    </label>\n\n    <!-- Selettore data di fine: al cambio chiama subito applica() per aggiornare la tabella -->\n    <label style=\"color:#cbd5e1\">\n        A\n        <input type=\"date\" ng-model=\"f.end\" ng-change=\"applica()\"\n               style=\"margin-left:6px;background:#0f172a;color:#e8eef8;border:1px solid #334155;border-radius:6px;padding:4px 8px\">\n    </label>\n\n    <!-- Pulsante per ripulire le date selezionate e mostrare di nuovo tutti i log -->\n    <button type=\"button\" ng-click=\"azzera()\"\n            style=\"background:#1e293b;color:#e8eef8;border:1px solid #334155;border-radius:6px;padding:4px 10px;cursor:pointer\">\n        Azzera\n    </button>\n\n    <!-- Pulsante per scaricare il file CSV filtrato sia per data sia per dispositivi spuntati -->\n    <button type=\"button\" ng-click=\"esporta()\"\n            style=\"background:#0ea5e9;color:#fff;border:0;border-radius:6px;padding:5px 12px;cursor:pointer\">\n        Esporta CSV\n    </button>\n</div>\n\n<script>\n    (function(scope) {\n    // Costruisce dinamicamente l'indirizzo del backend Flask usando l'host corrente del browser\n    var API = 'http://' + window.location.hostname + ':5000';\n\n    // Oggetto che mantiene lo stato delle date selezionate nei due input HTML\n    scope.f = { start: '', end: '' };\n\n    // Array che memorizza gli ID dei dispositivi spuntati nel widget \"Filtri Monitoraggio\"\n    // (null indica che non è ancora arrivato alcun filtro dal nodo delle checkbox)\n    scope.selectedSensors = null;\n\n    // Rimane in ascolto dei messaggi Node-RED in ingresso su questo nodo template\n    scope.$watch('msg', function(msg) {\n        // Intercetta solo i messaggi provenienti dalle checkbox dei dispositivi\n        if (msg && msg.topic === 'tb/filter/sensors' && Array.isArray(msg.payload)) {\n            scope.selectedSensors = msg.payload;\n        }\n    });\n\n    // Converte un oggetto Date o una stringa nel formato standard ISO \"YYYY-MM-DD\"\n    function dataISO(valore) {\n        if (!valore) { return ''; }\n        if (typeof valore === 'string') { return valore.substring(0, 10); }\n        var anno = valore.getFullYear();\n        var mese = ('0' + (valore.getMonth() + 1)).slice(-2);\n        var giorno = ('0' + valore.getDate()).slice(-2);\n        return anno + '-' + mese + '-' + giorno;\n    }\n\n    // Invia al flusso Node-RED (verso tb_set_log_filter) l'intervallo di date scelto per filtrare la UI\n    scope.applica = function() {\n        scope.send({\n            topic: 'tb/filter/log',\n            payload: {\n                start: dataISO(scope.f.start),\n                end: dataISO(scope.f.end)\n            }\n        });\n    };\n\n    // Svuota entrambi i campi data e riapplica il filtro per ripristinare la vista completa\n    scope.azzera = function() {\n        scope.f.start = '';\n        scope.f.end = '';\n        scope.applica();\n    };\n\n    // Costruisce l'URL con i parametri query string (date + sensori) e avvia il download del CSV\n    scope.esporta = function() {\n        var inizio = dataISO(scope.f.start);\n        var fine = dataISO(scope.f.end);\n        var query = [];\n\n        // Aggiunge i parametri temporali solo se valorizzati dall'utente\n        if (inizio) { query.push('inizio=' + encodeURIComponent(inizio)); }\n        if (fine)   { query.push('fine=' + encodeURIComponent(fine)); }\n\n        // Aggiunge la lista dei sensori selezionati separati da virgola (es. sensor_id=s1,s2)\n        if (Array.isArray(scope.selectedSensors)) {\n            query.push('sensor_id=' + encodeURIComponent(scope.selectedSensors.join(',')));\n        }\n\n        // Reindirizza il browser all'endpoint Flask che restituisce il file CSV in allegato\n        window.location = API + '/api/telemetry/export' +\n            (query.length ? '?' + query.join('&') : '');\n    };\n\n    // Inizializza lo stato del filtro nel flusso appena il widget viene caricato\n    scope.applica();\n})(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": false,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 140,
+        "y": 320,
+        "wires": [
+            [
+                "3cf0a4e1271ff389"
+            ]
+        ]
+    },
+    {
+        "id": "3cf0a4e1271ff389",
+        "type": "function",
+        "z": "bd221f64448ef576",
+        "name": "tb_set_log_filter",
+        "func": "flow.set('tb_log_start', msg.payload.start || '');\nflow.set('tb_log_end', msg.payload.end || '');\nreturn { topic: 'refresh', payload: {} };",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 480,
+        "wires": [
+            [
+                "c639411c9ebd65a8"
+            ]
+        ]
+    },
+    {
+        "id": "022038841d93b144",
+        "type": "debug",
+        "z": "99b11249821b3b1e",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 430,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "d2bd2fd40c1b6ab0",
+        "type": "inject",
+        "z": "99b11249821b3b1e",
+        "name": "solution1",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "",
+        "payload": "{\"name\":\"fred\",\"surname\":\"jones\",\"age\":25,\"email\":\"fred@acme.inc\"}",
+        "payloadType": "json",
+        "x": 660,
+        "y": 320,
+        "wires": [
+            [
+                "0e9f0c6c33737219"
+            ]
+        ]
+    },
+    {
+        "id": "fbb48abe04c9d1cf",
+        "type": "debug",
+        "z": "99b11249821b3b1e",
+        "name": "output1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "8ba29ed5977e9aac",
+        "type": "comment",
+        "z": "99b11249821b3b1e",
+        "name": "Add solution for test here",
+        "info": "",
+        "x": 894,
+        "y": 276,
+        "wires": []
+    },
+    {
+        "id": "7f854ba62ba56b5b",
+        "type": "comment",
+        "z": "99b11249821b3b1e",
+        "name": "ADD YOUR SOLUTIONS HERE",
+        "info": "Implement your solutions to the test scenarios. ",
+        "x": 700,
+        "y": 214,
+        "wires": []
+    },
+    {
+        "id": "21f90be56b3961d8",
+        "type": "comment",
+        "z": "99b11249821b3b1e",
+        "name": "JSONATA o Template Node?",
+        "info": "Guardate cosa esce dal debug sulla sinistra e generate la medesime uscita del debug node usando quello che volete tra template node o jsonata. \n",
+        "x": 270,
+        "y": 214,
+        "wires": []
+    },
+    {
+        "id": "d71c25c658ddead8",
+        "type": "inject",
+        "z": "99b11249821b3b1e",
+        "name": "soluzione 1",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "fred jones",
+        "payloadType": "str",
+        "x": 210,
+        "y": 320,
+        "wires": [
+            [
+                "022038841d93b144"
+            ]
+        ]
+    },
+    {
+        "id": "0e9f0c6c33737219",
+        "type": "change",
+        "z": "99b11249821b3b1e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.name & \" \" & payload.surname & \" \" & \"ha\" & \" \" & payload.age & \" \" & \"anni\" & \" \" & \"con email\" & \" \" & payload.email",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 860,
+        "y": 320,
+        "wires": [
+            [
+                "fbb48abe04c9d1cf"
+            ]
+        ]
+    },
+    {
+        "id": "a0512ccd1f28d910",
+        "type": "function",
+        "z": "38cea33a51cf4774",
+        "name": "function 5",
+        "func": "let cognome = msg.payload.surname;\nlet nome = msg.payload.name;\nlet anni = msg.payload.age;\n\n// Verifico se è maggiorenne (restituisce true o false)\nlet maggiorenne = anni >= 18;\n\n// Conversione del valore booleano per dire se è \"Maggiorenne\" o \"Minorenne\"\nlet stato = maggiorenne ? \"maggiorenne\" : \"minorenne\";\n\nlet frase = nome + \" \" + cognome + \" \" + \"ha\" + \" \" + anni + \" \" + \"anni\" + \" \" + \"ed è:\" + stato\n\nmsg.payload = frase;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 180,
+        "wires": [
+            [
+                "0d739bd7c245e2f5"
+            ]
+        ]
+    },
+    {
+        "id": "ff3f1bcbc239fe1e",
+        "type": "inject",
+        "z": "38cea33a51cf4774",
+        "name": "Dati Persona",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Persona",
+        "payload": "{\"name\":\"Anis\",\"surname\":\"Ravera\",\"age\":20,\"email\":\"emailesempio@edu-its.it\",\"peso\":76}",
+        "payloadType": "json",
+        "x": 310,
+        "y": 180,
+        "wires": [
+            [
+                "a0512ccd1f28d910"
+            ]
+        ]
+    },
+    {
+        "id": "0d739bd7c245e2f5",
+        "type": "debug",
+        "z": "38cea33a51cf4774",
+        "name": "debug 19",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "9770f31747c597f7",
+        "type": "ui_form",
+        "z": "38cea33a51cf4774",
+        "name": "Registrazione Utente",
+        "label": "Inserisci i tuoi dati:",
+        "group": "aae093b33471042d",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Nome",
+                "value": "nome",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Cognome",
+                "value": "cognome",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Età",
+                "value": "eta",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Mail",
+                "value": "mail",
+                "type": "email",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Peso",
+                "value": "peso",
+                "type": "number",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "nome": "",
+            "cognome": "",
+            "eta": "",
+            "mail": "",
+            "peso": ""
+        },
+        "payload": "",
+        "submit": "Registra",
+        "cancel": "Annulla",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": false,
+        "className": "",
+        "x": 300,
+        "y": 400,
+        "wires": [
+            [
+                "ba0366bf5664d9fd",
+                "c7d0ebed2218db69"
+            ]
+        ]
+    },
+    {
+        "id": "ba0366bf5664d9fd",
+        "type": "debug",
+        "z": "38cea33a51cf4774",
+        "name": "debug 20",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 530,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "37f5fa5f2dc05b8a",
+        "type": "ui_text",
+        "z": "38cea33a51cf4774",
+        "group": "060699caf4a68c60",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Esito registrazione",
+        "label": "Esito:",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 860,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "c7d0ebed2218db69",
+        "type": "function",
+        "z": "38cea33a51cf4774",
+        "name": "Formatta Frase Dashboard",
+        "func": "let nome = msg.payload.nome;\nlet cognome = msg.payload.cognome;\nlet eta = msg.payload.eta;\n\n// Genero il booleano calcolandolo dinamicamente dall'età\nlet isMaggiorenne = (eta >= 18);\n\n// Valuto la condizione sul parametro booleano appena creato\nlet stato = isMaggiorenne ? \"maggiorenne\" : \"minorenne\";\n\nmsg.payload = `${nome} ${cognome} ha ${eta} anni ed è ${stato}`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 440,
+        "wires": [
+            [
+                "37f5fa5f2dc05b8a"
+            ]
+        ]
+    },
+    {
+        "id": "abf2c8a0b0aa886a",
+        "type": "comment",
+        "z": "38cea33a51cf4774",
+        "name": "Api ",
+        "info": "analizzate cosa viene restituito dalla chiamata API qui indicata. \n\nQuindi create una landing page (uno o più testi) che ci informino del nome di una pietanza e della sua ricetta generate randomicamente alla pressione di un bottone nella stessa pagina. ",
+        "x": 329,
+        "y": 703,
+        "wires": []
+    },
+    {
+        "id": "abef851df4dddaee",
+        "type": "inject",
+        "z": "38cea33a51cf4774",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 340,
+        "y": 760,
+        "wires": [
+            [
+                "cf25e5e50c5f9eb8"
+            ]
+        ]
+    },
+    {
+        "id": "cf25e5e50c5f9eb8",
+        "type": "http request",
+        "z": "38cea33a51cf4774",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "www.themealdb.com/api/json/v1/1/random.php ",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 550,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d39e6799cefeee86",
+        "type": "comment",
+        "z": "38cea33a51cf4774",
+        "name": "Soluzione esercizio 23!!!",
+        "info": "",
+        "x": 1070,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "c8d0484abfa028de",
+        "type": "comment",
+        "z": "38cea33a51cf4774",
+        "name": "Soluzione esercizio 24!!!",
+        "info": "",
+        "x": 850,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "a64e072cb1517916",
+        "type": "ui_button",
+        "z": "38cea33a51cf4774",
+        "name": "Bottone Genera",
+        "group": "aa0453fe76692635",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Genera Nuova Ricetta",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "genera",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 260,
+        "y": 860,
+        "wires": [
+            [
+                "f27acf85a691496e"
+            ]
+        ]
+    },
+    {
+        "id": "f27acf85a691496e",
+        "type": "http request",
+        "z": "38cea33a51cf4774",
+        "name": "API TheMealDB",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://www.themealdb.com/api/json/v1/1/random.php",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 480,
+        "y": 860,
+        "wires": [
+            [
+                "61fa5fecc2a4e3e4"
+            ]
+        ]
+    },
+    {
+        "id": "61fa5fecc2a4e3e4",
+        "type": "function",
+        "z": "38cea33a51cf4774",
+        "name": "Prepara Dati",
+        "func": "if (msg.payload && msg.payload.meals && msg.payload.meals.length > 0) {\n    let pasto = msg.payload.meals[0];\n    \n    msg.nome_piatto = pasto.strMeal;\n    msg.istruzioni = pasto.strInstructions;\n    \n    return msg;\n}\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 860,
+        "wires": [
+            [
+                "a5a5ec533b2f4fe7",
+                "a8b5382057d04f3f"
+            ]
+        ]
+    },
+    {
+        "id": "a5a5ec533b2f4fe7",
+        "type": "ui_text",
+        "z": "38cea33a51cf4774",
+        "group": "aa0453fe76692635",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "Testo Nome",
+        "label": "Piatto:",
+        "format": "{{msg.nome_piatto}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 870,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "a8b5382057d04f3f",
+        "type": "ui_template",
+        "z": "38cea33a51cf4774",
+        "group": "aa0453fe76692635",
+        "name": "Box Istruzioni",
+        "order": 3,
+        "width": 0,
+        "height": 8,
+        "format": "<div style=\"height: 350px; overflow-y: auto; padding: 15px; background-color: #fcfcfc; border: 1px solid #e0e0e0; border-radius: 6px; font-family: sans-serif; font-size: 15px; line-height: 1.5; color: #333; white-space: pre-wrap;\">{{msg.istruzioni}}</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 880,
+        "y": 900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "268d7f893aa92f41",
+        "type": "comment",
+        "z": "38cea33a51cf4774",
+        "name": "Soluzione esercizio 25!!!",
+        "info": "",
+        "x": 890,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "mqtt_in_esami",
+        "type": "mqtt in",
+        "z": "38cea33a51cf4774",
+        "name": "Ascolta /piazza-esami",
+        "topic": "/piazza-esami",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "broker_hivemq_esami",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 1200,
+        "wires": [
+            [
+                "func_abbellisci",
+                "debug_esami"
+            ]
+        ]
+    },
+    {
+        "id": "func_abbellisci",
+        "type": "function",
+        "z": "38cea33a51cf4774",
+        "name": "Estrai e Arrotonda",
+        "func": "if (msg.payload && msg.payload.data !== undefined) {\n    // Prende il valore numerico e lo arrotonda a 2 cifre decimali\n    msg.payload = Number(msg.payload.data).toFixed(2);\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 1200,
+        "wires": [
+            [
+                "ui_gauge_temp",
+                "ui_text_temp"
+            ]
+        ]
+    },
+    {
+        "id": "ui_gauge_temp",
+        "type": "ui_gauge",
+        "z": "38cea33a51cf4774",
+        "name": "Termometro",
+        "group": "group_chill",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperatura",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "40",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "20",
+        "seg2": "30",
+        "diff": false,
+        "className": "",
+        "x": 670,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "ui_text_temp",
+        "type": "ui_text",
+        "z": "38cea33a51cf4774",
+        "group": "group_chill",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "Testo",
+        "label": "Valore registrato:",
+        "format": "{{msg.payload}} °C",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 650,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "debug_esami",
+        "type": "debug",
+        "z": "38cea33a51cf4774",
+        "name": "Debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 410,
+        "y": 1140,
+        "wires": []
+    }
+]
