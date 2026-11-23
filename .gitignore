@@ -20,3 +20,7 @@ db_data/*.db
 
 # Log
 *.log
+
+# Dipendenze locali di Node-RED
+nodered_data/node_modules/
+nodered_data/*.backup
