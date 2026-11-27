@@ -1,29 +1,29 @@
 services:
-  # Broker MQTT centrale (HiveMQ Community Edition)
-  # Riceve i pacchetti telemetrici pubblicati dai sensori/simulatore sulla porta 1883
+  # Broker MQTT centrale (HiveMQ Community Edition).
+  # Riceve i messaggi pubblicati dai sensori e li smista a chi è iscritto.
   hivemq:
     image: hivemq/hivemq-ce:latest
     container_name: telemetry-hivemq
     ports:
-      - "1883:1883"
+      - "1883:1883"  # Porta standard MQTT.
     restart: unless-stopped
 
-  # Backend Python
+  # Backend Python: API Flask + database SQLite.
   api:
     build: ./backend
     container_name: telemetry-api
     ports:
-      - "5000:5000"
+      - "5000:5000"  # Porta dell'API Flask.
     volumes:
-      - ./backend:/app
-      - ./db_data:/data
+      - ./backend:/app   # Collego il codice del backend alla cartella locale.
+      - ./db_data:/data  # Il database resta fuori dal container, così i dati non si perdono.
     environment:
       - FLASK_DEBUG=true
       - DB_DATA_DIR=/data
     restart: unless-stopped
 
-  # Microservizio Consumer MQTT -> HTTP API
-  # Resta in ascolto sul topic telemetry/# di HiveMQ e inoltra i dati JSON al backend Flask
+  # Worker che legge i messaggi MQTT e li inoltra all'API Flask.
+  # Resta in ascolto sul topic telemetry/# di HiveMQ e manda i dati JSON al backend.
   mqtt-worker:
     build: ./worker
     container_name: telemetry-mqtt-worker
@@ -33,28 +33,23 @@ services:
       - MQTT_TOPIC=telemetry/#
       - API_URL=http://api:5000/api/telemetry
     depends_on:
-      - hivemq
-      - api
+      - hivemq  # Il worker parte solo dopo il broker...
+      - api     # ...e dopo che l'API è stata avviata.
     restart: unless-stopped
 
-  # Node-RED in Docker (opzionale).
-  # Di default NON viene avviato: in questo progetto Node-RED gira sul PC
-  # (comando "node-red") e usa la porta 1880.
-  # Per avviarlo comunque in Docker:
-  #   docker compose --profile nodered up -d nodered
+  # Node-RED in Docker con Dashboard 1.x.
+  # La dashboard del progetto è raggiungibile su http://localhost:1880/ui
+  # e il flusso salvato nel repository si trova in ./nodered_data/flows.json.
   nodered:
     image: nodered/node-red:latest
     container_name: telemetry-nodered
-    # Mantiene i permessi del tuo utente Linux ed evita file bloccati da root in ./nodered_data
+    # Mantiene i permessi del tuo utente Linux ed evita file bloccati da root in ./nodered_data.
     user: "1000:1000"
     ports:
-      - "1880:1880"
+      - "1880:1880"  # Porta dell'editor e della dashboard Node-RED.
     volumes:
       - ./nodered_data:/data
     depends_on:
       - api
       - hivemq
     restart: unless-stopped
-
-volumes:
-  nodered_data:

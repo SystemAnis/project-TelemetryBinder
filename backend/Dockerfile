@@ -9,5 +9,5 @@ COPY . .
 
 EXPOSE 5000
 
-# Avvio dell'app
+# Comando che avvia l'API Flask sulla porta 5000.
 CMD ["flask", "--app", "main", "run", "--host=0.0.0.0", "--port=5000"]

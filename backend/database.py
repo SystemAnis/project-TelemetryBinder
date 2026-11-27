@@ -1,4 +1,4 @@
 from flask_sqlalchemy import SQLAlchemy
 
-# inizializzo l'instanza vuota di SQLAlchemy per SQLite 3
+# Creo l'istanza di SQLAlchemy che verrà collegata all'app Flask e userà il database SQLite 3.
 db = SQLAlchemy()

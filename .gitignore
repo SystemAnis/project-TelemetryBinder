@@ -6,7 +6,7 @@ __pycache__/
 venv/
 env/
 
-# Database SQLite generato a runtime da Docker
+# Database SQLite creato dall'app mentre è in esecuzione
 db_data/*.db
 
 # Variabili d'ambiente e segreti
@@ -23,4 +23,5 @@ db_data/*.db
 
 # Dipendenze locali di Node-RED
 nodered_data/node_modules/
+nodered_data/.npm/
 nodered_data/*.backup

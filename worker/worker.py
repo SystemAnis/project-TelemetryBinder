@@ -4,7 +4,7 @@ import time
 import requests
 import paho.mqtt.client as mqtt
 
-# Parametri letti dalle variabili d'ambiente del docker-compose.yml
+# Parametri letti dalle variabili d'ambiente del docker-compose.yml.
 BROKER_HOST = os.getenv("MQTT_BROKER", "hivemq")
 BROKER_PORT = int(os.getenv("MQTT_PORT", "1883"))
 MQTT_TOPIC = os.getenv("MQTT_TOPIC", "telemetry/#")
@@ -15,7 +15,7 @@ def on_connect(client, userdata, flags, reason_code, properties):
     """Callback eseguita ogni volta che il worker si connette (o riconnette) a HiveMQ."""
     if reason_code == 0:
         print(f"[MQTT-WORKER] Connesso a HiveMQ ({BROKER_HOST}:{BROKER_PORT})")
-        # Si iscrive a tutti i sottotopic di telemetry/ (es. telemetry/sensore_server_1)
+        # Mi iscrivo a tutti i sottotopic di telemetry/ (es. telemetry/sensore_server_1).
         client.subscribe(MQTT_TOPIC)
         print(f"[MQTT-WORKER] Sottoscritto al topic: {MQTT_TOPIC}")
     else:
@@ -24,6 +24,7 @@ def on_connect(client, userdata, flags, reason_code, properties):
 
 def on_message(client, userdata, msg):
     """Callback eseguita alla ricezione di ogni pacchetto MQTT."""
+    # Il payload arriva come bytes: lo trasformo in testo UTF-8.
     raw_payload = msg.payload.decode("utf-8", errors="replace")
     print(f"[MQTT-WORKER] Messaggio ricevuto su '{msg.topic}': {raw_payload}")
 
@@ -33,13 +34,14 @@ def on_message(client, userdata, msg):
         print("[MQTT-WORKER] Payload scartato: non è un JSON valido")
         return
 
-    # Se il JSON non include sensor_id, prova a ricavarlo dal topic (es. telemetry/sensore_server_1)
+    # Se il JSON non include sensor_id, provo a ricavarlo dal topic
+    # (es. telemetry/sensore_server_1 -> sensore_server_1).
     if "sensor_id" not in dati:
         parti_topic = msg.topic.split("/")
         if len(parti_topic) >= 2 and parti_topic[1]:
             dati["sensor_id"] = parti_topic[1]
 
-    # Inoltra il dato al microservizio API Flask per la valutazione soglie e il salvataggio su SQLite
+    # Inoltro il dato all'API Flask: lei calcola lo stato con le soglie e salva su SQLite.
     try:
         risposta = requests.post(API_URL, json=dati, timeout=5)
         if risposta.status_code in (200, 201):
@@ -52,12 +54,13 @@ def on_message(client, userdata, msg):
 
 
 def main():
-    # Usa CallbackAPIVersion.VERSION2 richiesta da paho-mqtt >= 2.0
+    # Uso CallbackAPIVersion.VERSION2, richiesta da paho-mqtt >= 2.0.
     client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2, client_id="telemetry-mqtt-worker")
     client.on_connect = on_connect
     client.on_message = on_message
 
-    # Ciclo di attesa iniziale finché il container HiveMQ non ha completato l'avvio
+    # Attendo che il container HiveMQ abbia completato l'avvio:
+    # riprovo la connessione ogni 3 secondi finché non risponde.
     while True:
         try:
             client.connect(BROKER_HOST, BROKER_PORT, keepalive=60)
@@ -66,7 +69,7 @@ def main():
             print(f"[MQTT-WORKER] HiveMQ non ancora pronto ({exc}), nuovo tentativo tra 3s...")
             time.sleep(3)
 
-    # Loop infinito con gestione automatica delle riconnessioni
+    # Resto in ascolto per sempre; la libreria gestisce da sola le riconnessioni.
     client.loop_forever()
 
 
